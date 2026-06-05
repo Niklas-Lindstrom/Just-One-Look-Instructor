@@ -1,0 +1,475 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #444;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+ul, ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease;
+}
+
+a:hover {
+    border-bottom: 1px solid #0066cc;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 0.3px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-size: 0.9em;
+    color: #666;
+    transition: color 0.2s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+}
+
+.nav-menu a:hover {
+    color: #222;
+}
+
+.nav-menu a.active {
+    color: #222;
+    border-bottom: 2px solid #333;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    background-color: #555;
+}
+
+.secondary-button {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.secondary-button:hover {
+    background-color: #ddd;
+}
+
+/* ============================================
+   HOME PAGE
+   ============================================ */
+.home-page {
+    min-height: 100vh;
+}
+
+.hero {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.intro {
+    padding: 60px 20px;
+    background-color: #fafafa;
+}
+
+.intro h2 {
+    margin-top: 0;
+}
+
+.intro p {
+    font-size: 1.05em;
+    color: #555;
+}
+
+.chatbot-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.chatbot-section h2 {
+    margin-top: 0;
+}
+
+.chatbot-info {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.chatbot-info p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.cta {
+    padding: 60px 20px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.cta h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: 0;
+}
+
+/* ============================================
+   DO IT PAGE
+   ============================================ */
+.do-it-page {
+    padding: 40px 20px 60px 20px;
+    min-height: calc(100vh - 60px);
+    background-color: #fafafa;
+}
+
+.intro-text {
+    font-size: 1.05em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.step-section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-left: 4px solid #333;
+}
+
+.step-section h2 {
+    margin-top: 0;
+    color: #222;
+}
+
+.step-section p {
+    color: #555;
+}
+
+.action-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.action-box p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.action-box a,
+.action-box button {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.reflection-section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-left: 4px solid #333;
+}
+
+.next-steps {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 4px;
+    border-left: 4px solid #333;
+}
+
+.next-steps h2 {
+    margin-top: 0;
+}
+
+.next-steps ul {
+    margin-bottom: 30px;
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+.about-page {
+    padding: 40px 20px 60px 20px;
+    background-color: #fafafa;
+}
+
+.about-section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.about-section h2 {
+    margin-top: 0;
+    color: #222;
+}
+
+.about-section h3 {
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.definition-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 3px solid #333;
+    margin-bottom: 20px;
+}
+
+.definition-box h3 {
+    margin-top: 0;
+}
+
+.definition-box p {
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   FAQ PAGE
+   ============================================ */
+.faq-page {
+    padding: 40px 20px 60px 20px;
+    background-color: #fafafa;
+}
+
+.faq-page h1 {
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #333;
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    color: #222;
+}
+
+.faq-item p {
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    padding: 30px 20px;
+    text-align: center;
+    color: #999;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        font-size: 0.85em;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .step-section,
+    .about-section,
+    .faq-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1em;
+    }
+
+    .nav-menu {
+        gap: 10px;
+        font-size: 0.75em;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        margin-top: 20px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .intro,
+    .chatbot-section,
+    .cta {
+        padding: 40px 20px;
+    }
+
+    .primary-button,
+    .secondary-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}

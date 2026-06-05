@@ -3,42 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just One Look - Interactive Guide</title>
+    <title>Just One Look</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Just One Look - Interactive Guide</h1>
-        <p>Interactive guide for the inward look of the Just One Look Method.</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#guide">Guide</a></li>
-            <li><a href="#resources">Resources</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Just One Look</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="do-it.html">Do It</a></li>
+                <li><a href="about.html">What Is It?</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Welcome to the interactive guide for exploring the Just One Look Method.</p>
+    <main class="home-page">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Just One Look</h1>
+                <p>A simple act. See what happens.</p>
+                <a href="do-it.html" class="primary-button">Start Now</a>
+            </div>
         </section>
 
-        <section id="guide">
-            <h2>Guide</h2>
-            <p>Content coming soon...</p>
+        <section class="intro">
+            <div class="container">
+                <h2>What You'll Do</h2>
+                <p>Look at yourself. Notice the feeling of being you, right now.</p>
+                <p>That's it. Simple and direct.</p>
+                <p>If you want help with this, we have an interactive guide below.</p>
+            </div>
         </section>
 
-        <section id="resources">
-            <h2>Resources</h2>
-            <p>Additional resources and links will be added here.</p>
+        <section class="chatbot-section">
+            <div class="container">
+                <h2>Interactive Guide</h2>
+                <p>If you'd like to try the inward look with interactive guidance, use the chatbot below.</p>
+                <div class="chatbot-info">
+                    <p>The chatbot is available to help you explore your experience and answer questions about the practice.</p>
+                    <a href="https://chatgpt.com/g/g-69e2310032ec8191a886a5811372695c-look-at-yourself" target="_blank" rel="noopener noreferrer" class="primary-button">Open Chatbot Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h3>Ready?</h3>
+                <a href="do-it.html" class="primary-button">Start the Inward Look</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Just One Look Instructor. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Just One Look</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
