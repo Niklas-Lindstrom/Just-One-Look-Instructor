@@ -18,33 +18,27 @@ body {
     background-color: #fafafa;
 }
 
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* ============================================
    TYPOGRAPHY
    ============================================ */
 h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom: 30px;
     font-weight: 600;
     color: #222;
-}
-
-h2 {
-    font-size: 1.4em;
-    margin-bottom: 15px;
-    margin-top: 30px;
-    font-weight: 600;
-    color: #333;
+    letter-spacing: -0.5px;
 }
 
 h3 {
     font-size: 1.1em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+h4 {
+    font-size: 0.95em;
+    margin-bottom: 8px;
     font-weight: 600;
     color: #444;
 }
@@ -52,338 +46,142 @@ h3 {
 p {
     margin-bottom: 15px;
     line-height: 1.7;
+    color: #555;
 }
 
-ul, ol {
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-    line-height: 1.7;
+.small-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 12px;
 }
 
 a {
     color: #0066cc;
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 a:hover {
-    border-bottom: 1px solid #0066cc;
+    color: #0052a3;
 }
 
 /* ============================================
-   NAVIGATION
+   HOME PAGE - HERO LAYOUT
    ============================================ */
-.navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+.home-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.nav-container {
-    max-width: 1000px;
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    flex: 1;
+    padding: 80px 40px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
     align-items: center;
-    height: 60px;
-}
-
-.logo {
-    font-size: 1.1em;
-    font-weight: 600;
-    color: #222;
-    letter-spacing: 0.3px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-menu a {
-    font-size: 0.9em;
-    color: #666;
-    transition: color 0.2s ease;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 3px;
-}
-
-.nav-menu a:hover {
-    color: #222;
-}
-
-.nav-menu a.active {
-    color: #222;
-    border-bottom: 2px solid #333;
 }
 
 /* ============================================
-   BUTTONS
+   HERO CENTER
    ============================================ */
-.primary-button,
-.secondary-button {
+.hero-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1 {
+    margin-bottom: 40px;
+}
+
+/* ============================================
+   TRY IT BUTTON
+   ============================================ */
+.try-it-button {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 16px 40px;
     background-color: #333;
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 0.95em;
+    font-size: 1.1em;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.primary-button:hover,
-.secondary-button:hover {
+.try-it-button:hover {
     background-color: #555;
-}
-
-.secondary-button {
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-.secondary-button:hover {
-    background-color: #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
-   HOME PAGE
+   SIDEBARS
    ============================================ */
-.home-page {
-    min-height: 100vh;
-}
-
-.hero {
+.sidebar {
     background-color: #ffffff;
-    padding: 80px 20px;
-    text-align: center;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    height: fit-content;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    color: #222;
-}
-
-.hero p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.intro {
-    padding: 60px 20px;
-    background-color: #fafafa;
-}
-
-.intro h2 {
+.sidebar h3 {
     margin-top: 0;
-}
-
-.intro p {
+    color: #222;
     font-size: 1.05em;
-    color: #555;
 }
 
-.chatbot-section {
-    padding: 60px 20px;
-    background-color: #ffffff;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
+.sidebar p {
+    font-size: 0.95em;
 }
 
-.chatbot-section h2 {
-    margin-top: 0;
+.sidebar-section {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.chatbot-info {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 4px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.chatbot-info p {
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.cta {
-    padding: 60px 20px;
-    background-color: #fafafa;
-    text-align: center;
-}
-
-.cta h3 {
-    font-size: 1.3em;
-    margin-bottom: 20px;
-    color: #333;
-    margin-top: 0;
-}
-
-/* ============================================
-   DO IT PAGE
-   ============================================ */
-.do-it-page {
-    padding: 40px 20px 60px 20px;
-    min-height: calc(100vh - 60px);
-    background-color: #fafafa;
-}
-
-.intro-text {
-    font-size: 1.05em;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.step-section {
-    background-color: #ffffff;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    border-left: 4px solid #333;
-}
-
-.step-section h2 {
-    margin-top: 0;
-    color: #222;
-}
-
-.step-section p {
-    color: #555;
-}
-
-.action-box {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 4px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.action-box p {
-    margin-bottom: 10px;
-    color: #666;
-}
-
-.action-box a,
-.action-box button {
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.reflection-section {
-    background-color: #ffffff;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    border-left: 4px solid #333;
-}
-
-.next-steps {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 4px;
-    border-left: 4px solid #333;
-}
-
-.next-steps h2 {
-    margin-top: 0;
-}
-
-.next-steps ul {
-    margin-bottom: 30px;
-}
-
-/* ============================================
-   ABOUT PAGE
-   ============================================ */
-.about-page {
-    padding: 40px 20px 60px 20px;
-    background-color: #fafafa;
-}
-
-.about-section {
-    background-color: #ffffff;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-}
-
-.about-section h2 {
-    margin-top: 0;
-    color: #222;
-}
-
-.about-section h3 {
-    color: #333;
-    margin-bottom: 12px;
-}
-
-.definition-box {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-left: 3px solid #333;
-    margin-bottom: 20px;
-}
-
-.definition-box h3 {
-    margin-top: 0;
-}
-
-.definition-box p {
-    color: #555;
+.sidebar-section:last-of-type {
+    border-bottom: none;
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-/* ============================================
-   FAQ PAGE
-   ============================================ */
-.faq-page {
-    padding: 40px 20px 60px 20px;
-    background-color: #fafafa;
+.sidebar-section h4 {
+    color: #333;
 }
 
-.faq-page h1 {
-    margin-bottom: 40px;
+.sidebar-section p {
+    margin-bottom: 8px;
 }
 
-.faq-item {
-    background-color: #ffffff;
-    padding: 25px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border-left: 4px solid #333;
-}
-
-.faq-item h3 {
-    margin-top: 0;
-    color: #222;
-}
-
-.faq-item p {
-    color: #555;
-    margin-bottom: 0;
+.sidebar-footer {
+    font-size: 0.85em;
+    color: #777;
+    font-style: italic;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
 }
 
 /* ============================================
@@ -394,82 +192,117 @@ footer {
     border-top: 1px solid #e0e0e0;
     padding: 30px 20px;
     text-align: center;
-    color: #999;
-    font-size: 0.9em;
+    margin-top: auto;
 }
 
-footer p {
+.footer-content p {
+    color: #999;
+    font-size: 0.9em;
     margin-bottom: 0;
 }
 
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 60px 30px;
+    }
+
+    .hero-center {
+        order: 1;
+    }
+
+    .sidebar-left {
+        order: 2;
+    }
+
+    .sidebar-right {
+        order: 3;
+    }
+
+    .sidebar {
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
     h1 {
-        font-size: 1.6em;
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px 20px;
     }
 
-    h2 {
-        font-size: 1.2em;
+    h1 {
+        font-size: 2em;
+        margin-bottom: 25px;
     }
 
-    .nav-menu {
-        gap: 15px;
-        font-size: 0.85em;
-    }
-
-    .hero h1 {
-        font-size: 1.8em;
-    }
-
-    .hero p {
+    .try-it-button {
+        padding: 14px 32px;
         font-size: 1em;
     }
 
-    .step-section,
-    .about-section,
-    .faq-item {
+    .sidebar {
         padding: 20px;
+    }
+
+    .sidebar h3 {
+        font-size: 1em;
+    }
+
+    .sidebar p {
+        font-size: 0.9em;
+    }
+
+    .small-text {
+        font-size: 0.85em;
     }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        font-size: 1em;
-    }
-
-    .nav-menu {
-        gap: 10px;
-        font-size: 0.75em;
+    .hero-container {
+        padding: 30px 16px;
+        gap: 15px;
     }
 
     h1 {
-        font-size: 1.4em;
+        font-size: 1.6em;
+        margin-bottom: 20px;
     }
 
-    h2 {
-        font-size: 1.1em;
-        margin-top: 20px;
+    .try-it-button {
+        padding: 12px 28px;
+        font-size: 0.95em;
     }
 
-    .hero {
-        padding: 50px 20px;
+    .sidebar {
+        padding: 15px;
     }
 
-    .hero h1 {
-        font-size: 1.5em;
+    .sidebar h3 {
+        font-size: 0.95em;
+        margin-bottom: 15px;
     }
 
-    .intro,
-    .chatbot-section,
-    .cta {
-        padding: 40px 20px;
+    .sidebar-section {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
     }
 
-    .primary-button,
-    .secondary-button {
-        padding: 10px 20px;
-        font-size: 0.9em;
+    .sidebar p {
+        font-size: 0.85em;
+    }
+
+    .small-text {
+        font-size: 0.8em;
     }
 }
